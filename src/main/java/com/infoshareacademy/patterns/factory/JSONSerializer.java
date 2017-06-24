@@ -5,6 +5,11 @@ package com.infoshareacademy.patterns.factory;
  */
 public class JSONSerializer implements Serializer {
 
+    public String filename;
+
+    public JSONSerializer(String file) {
+        this.filename = file;
+    }
 
     @Override
     public void serialize(Object o, String filename) {
@@ -12,8 +17,8 @@ public class JSONSerializer implements Serializer {
     }
 
     @Override
-    public Configuration deserialize(String filename) {
-        System.out.println("Deserializing Json file");
+    public Configuration deserialize() {
+        System.out.println("Deserializing Json file:" + filename);
 
         Configuration configuration = new Configuration();
         configuration.setPort(8080);

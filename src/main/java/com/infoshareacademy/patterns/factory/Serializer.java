@@ -5,7 +5,9 @@ package com.infoshareacademy.patterns.factory;
  */
 public interface Serializer {
 
+    public String filename = null;
+
     public void serialize(Object o, String filename);
-    public Configuration deserialize(String filename);
+    public Configuration deserialize();
 
 }
