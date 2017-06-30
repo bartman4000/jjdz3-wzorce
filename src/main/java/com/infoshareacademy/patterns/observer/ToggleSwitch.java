@@ -1,8 +1,27 @@
 package com.infoshareacademy.patterns.observer;
 
-public class ToggleSwitch extends AbstractSwitch {
+public class ToggleSwitch {
+
+    private LightBulb lightBulb;
+
+    private DoorBell doorBell;
+
+    public void setLightBulb(LightBulb lightBulb) {
+        this.lightBulb = lightBulb;
+    }
+
+    public void setDoorBell(DoorBell doorBell) {
+        this.doorBell = doorBell;
+    }
 
     public void push() {
-        notifyObservers();
+
+        if (lightBulb != null) {
+            lightBulb.light();
+        }
+
+        if (doorBell != null) {
+            doorBell.ring();
+        }
     }
 }

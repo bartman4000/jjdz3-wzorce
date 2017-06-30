@@ -4,16 +4,16 @@ package com.infoshareacademy.patterns.observer;
 public class Main {
 
     public static void main(String[] args) {
-        Observer lightBulb = new LightBulb();
-        Observer doorBell = new DoorBell();
+        LightBulb lightBulb = new LightBulb();
+        DoorBell doorBell = new DoorBell();
 
         ToggleSwitch toogleSwitch = new ToggleSwitch();
-        toogleSwitch.addObserver(lightBulb);
-        toogleSwitch.addObserver(doorBell);
+        toogleSwitch.setLightBulb(lightBulb);
+        toogleSwitch.setDoorBell(doorBell);
 
         WallSwitch wallSwitch = new WallSwitch();
-        wallSwitch.addObserver(lightBulb);
-        wallSwitch.addObserver(doorBell);
+        wallSwitch.setLightBulb(lightBulb);
+        wallSwitch.setDoorBell(doorBell);
 
         toogleSwitch.push();
         wallSwitch.push();

@@ -1,9 +1,8 @@
 package com.infoshareacademy.patterns.observer;
 
-public class LightBulb implements Observer {
+public class LightBulb {
 
-    @Override
-    public void update() {
+    public void light() {
         System.out.println("Light bulb switched on!");
     }
 }

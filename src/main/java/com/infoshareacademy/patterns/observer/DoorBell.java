@@ -1,9 +1,8 @@
 package com.infoshareacademy.patterns.observer;
 
-public class DoorBell implements Observer {
+public class DoorBell {
 
-    @Override
-    public void update() {
+    public void ring() {
         System.out.println("Doorbell rings!");
     }
 }
