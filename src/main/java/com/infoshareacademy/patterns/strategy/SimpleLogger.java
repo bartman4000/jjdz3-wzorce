@@ -2,13 +2,19 @@ package com.infoshareacademy.patterns.strategy;
 
 public class SimpleLogger {
 
-    private LoggingStrategy loggingStrategy;
-
-    public SimpleLogger(LoggingStrategy loggingStrategy) {
-        this.loggingStrategy = loggingStrategy;
+    public void logToConsole(String message) {
+        System.out.println("Logging to console: " + message);
     }
 
-    public void log(String message) {
-        loggingStrategy.log(message);
+    public void logToFile(String message) {
+        System.out.println("Logging to file: " + message);
+    }
+
+    public void logToStout(String message) {
+        System.out.println("Logging to stout: " + message);
+    }
+
+    public void logToSystemLog(String message) {
+        System.out.println("Logging to system log: " + message);
     }
 }
