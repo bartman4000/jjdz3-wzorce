@@ -8,10 +8,6 @@ public class HostCommands {
         System.out.println("file2.txt");
     }
 
-    public void shopHostIp() {
-        System.out.println("127.0.0.1");
-    }
-
     public void showHostName() {
         System.out.println("localhost");
     }
