@@ -1,20 +1,14 @@
 package com.infoshareacademy.patterns.command;
 
-public class HostCommands {
+/**
+ * Created by bartman3000 on 02.07.17.
+ */
+public class ShowHelpCommand implements Command {
 
-    public void listDirectory() {
-
-        System.out.println("file1.txt");
-        System.out.println("file2.txt");
-    }
-
-    public void showHostName() {
-        System.out.println("localhost");
-    }
-
-    public void shopHelp() {
+    static void execute() {
         System.out.println("ShowHostIP - display computer ip");
         System.out.println("ShowHostName - display name of the computer");
         System.out.println("ListDirectory - lists files in the current directory");
     }
+
 }

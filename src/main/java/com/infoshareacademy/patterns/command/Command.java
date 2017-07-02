@@ -5,6 +5,6 @@ package com.infoshareacademy.patterns.command;
  */
 public interface Command {
 
-    public void execute();
+    static void execute() {};
 
 }

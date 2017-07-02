@@ -3,12 +3,10 @@ package com.infoshareacademy.patterns.command;
 /**
  * Created by bartman3000 on 02.07.17.
  */
-public class ShowHostIPCommand implements Command {
+public class ShowIPCommand implements Command {
 
-    public void execute() {
-
+    static void execute() {
         System.out.println("127.0.0.1");
-
     }
-}
 
+}
