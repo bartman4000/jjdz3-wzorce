@@ -15,15 +15,12 @@ public class PrettyXMLBuilder implements SimpleXMLBuilder {
         this.stringBuilder = new StringBuilder();
     }
 
-    @Override
-    public void startTag(String name, Map attr) {
-
-        for (int i = 0; i < indentationLevel; i++) {
-            stringBuilder.append("  ");
-        }
-        stringBuilder.append("<" + name + ">\n");
-
+    public PrettyXMLBuilder(int indentationLevel)
+    {
+        this.stringBuilder = new StringBuilder();
+        this.indentationLevel = indentationLevel;
     }
+
 
     @Override
     public void startTag(String name) {
@@ -32,7 +29,7 @@ public class PrettyXMLBuilder implements SimpleXMLBuilder {
             stringBuilder.append("  ");
         }
         stringBuilder.append("<" + name + ">\n");
-
+        indentationLevel++;
     }
 
     @Override
